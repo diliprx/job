@@ -11,6 +11,7 @@ import {
   Phone,
   Sun,
   Moon,
+  Flag,
 } from "lucide-react";
 
 const CTFTeamWebsite = () => {
@@ -25,10 +26,12 @@ const CTFTeamWebsite = () => {
     const numDrops = 40;
     const initialDrops = Array.from({ length: numDrops }, (_, i) => ({
       id: i,
-      x: (i * (window.innerWidth / numDrops)),
+      x: i * (window.innerWidth / numDrops),
       y: Math.random() * -500,
       speed: 2 + Math.random() * 3,
-      chars: Array.from({ length: 20 }, () => Math.random() > 0.5 ? '1' : '0')
+      chars: Array.from({ length: 20 }, () =>
+        Math.random() > 0.5 ? "1" : "0"
+      ),
     }));
     setDrops(initialDrops);
   }, []);
@@ -36,13 +39,13 @@ const CTFTeamWebsite = () => {
   // Animate binary rain
   useEffect(() => {
     const interval = setInterval(() => {
-      setDrops(prevDrops => 
-        prevDrops.map(drop => {
+      setDrops((prevDrops) =>
+        prevDrops.map((drop) => {
           const newY = drop.y + drop.speed;
           return {
             ...drop,
             y: newY > window.innerHeight ? -100 : newY,
-            chars: drop.chars.map(() => Math.random() > 0.5 ? '1' : '0')
+            chars: drop.chars.map(() => (Math.random() > 0.5 ? "1" : "0")),
           };
         })
       );
@@ -60,17 +63,63 @@ const CTFTeamWebsite = () => {
     document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const teamMembers = [
-    { name: "Akash VI", handle: "MI3KY" },
-    { name: "Dilip Kumar V", handle: "Cle_Obsecure" },
-    { name: "Gopinath S", handle: "A$TR0" },
-    { name: "Hari Priyan R", handle: "NUX" },
-    { name: "Hemanth Kumar B", handle: "NIGHT_MARE" },
-    { name: "Kirthi Sai T", handle: "flexi_jack" },
-    { name: "Muthu Meena", handle: "doremon" },
-    { name: "Lakshmi", handle: "lakshmi" },
-    { name: "Porselvi", handle: "Crypto_Cr3w" },
-  ];
+ const teamMembers = [
+  { 
+    name: "Akash VI", 
+    handle: "MI3KY",
+    linkedin: "https://www.linkedin.com/in/akash-v-i/", 
+    ctftime: "https://ctftime.org/user/akash"
+  },
+  { 
+    name: "Dilip Kumar V", 
+    handle: "Cle_Obsecure",
+    linkedin: "https://www.linkedin.com/in/diliprx/",
+    ctftime: "https://ctftime.org/user/cle_obsecure"
+  },
+  { 
+    name: "Gopinath S", 
+    handle: "A$TR0",
+    linkedin: "https://www.linkedin.com/in/gopinath-s-42256b293/",
+    ctftime: "https://ctftime.org/user/astro"
+  },
+  { 
+    name: "Hari Priyan R", 
+    handle: "NUX",
+    linkedin: "https://www.linkedin.com/in/haripriyan-r-29b25a323/",
+    ctftime: "https://ctftime.org/user/nux"
+  },
+  { 
+    name: "Hemanth Kumar B", 
+    handle: "NIGHT_MARE",
+    linkedin: "https://www.linkedin.com/in/hemanthkumarb485/",
+    ctftime: "https://ctftime.org/user/night_mare"
+  },
+  { 
+    name: "Kirthi Sai T", 
+    handle: "flexi_jack",
+    linkedin: "https://www.linkedin.com/in/kirthi-sai/",
+    ctftime: "https://ctftime.org/user/flexi_jack"
+  },
+  { 
+    name: "Muthu Meena", 
+    handle: "doremon",
+    linkedin: "https://www.linkedin.com/in/muthu",
+    ctftime: "https://ctftime.org/user/doremon"
+  },
+  { 
+    name: "Lakshmi", 
+    handle: "lakshmi",
+    linkedin: "https://www.linkedin.com/in/lakshmi",
+    ctftime: "https://ctftime.org/user/lakshmi"
+  },
+  { 
+    name: "Porselvi", 
+    handle: "Crypto_Cr3w",
+    linkedin: "https://www.linkedin.com/in/porselvi",
+    ctftime: "https://ctftime.org/user/crypto_cr3w"
+  },
+];
+
 
   const achievements = [
     {
@@ -113,23 +162,23 @@ const CTFTeamWebsite = () => {
     >
       {/* Binary Rain Background */}
       <div className="fixed inset-0 opacity-20 pointer-events-none overflow-hidden">
-        {drops.map(drop => (
+        {drops.map((drop) => (
           <div
             key={drop.id}
             className="absolute font-mono text-red-500"
             style={{
               left: `${drop.x}px`,
               top: `${drop.y}px`,
-              fontSize: '14px',
-              lineHeight: '20px',
-              textShadow: '0 0 5px rgba(239, 68, 68, 0.5)'
+              fontSize: "14px",
+              lineHeight: "20px",
+              textShadow: "0 0 5px rgba(239, 68, 68, 0.5)",
             }}
           >
             {drop.chars.map((char, i) => (
-              <div 
+              <div
                 key={i}
-                style={{ 
-                  opacity: Math.max(0, 1 - (i * 0.05))
+                style={{
+                  opacity: Math.max(0, 1 - i * 0.05),
                 }}
               >
                 {char}
@@ -159,14 +208,17 @@ const CTFTeamWebsite = () => {
         } bg-opacity-90 backdrop-blur-sm z-50 border-b ${borderColor}`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold tracking-wider"> <h1 className="text-center">C1CC4D0</h1></div>
+          <div className="text-2xl font-bold tracking-wider">
+            {" "}
+            <h1 className="text-center">C1CC4D0</h1>
+          </div>
 
           {/* laptop Menu */}
           <div className="hidden md:flex space-x-8">
             {[
               "Home",
               "Team",
-              "Timeline",
+              "Succeeds",
               "Profiles",
               "Our Sponsors",
               "Contact",
@@ -204,7 +256,7 @@ const CTFTeamWebsite = () => {
             {[
               "Home",
               "Team",
-              "Timeline",
+              "Succeeds",
               "Profiles",
               "Our Sponsors",
               "Contact",
@@ -232,6 +284,7 @@ const CTFTeamWebsite = () => {
           <h1 className="text-6xl md:text-8xl font-bold mb-4 tracking-wider">
             C1CC4D0
           </h1>
+
           <p className="text-xl md:text-2xl mb-8 text-red-400">
             / Recon | Break | Capture
           </p>
@@ -284,14 +337,29 @@ const CTFTeamWebsite = () => {
                     theme === "dark" ? "text-gray-500" : "text-gray-400"
                   }`}
                 >
-                  <Linkedin
-                    size={20}
-                    className="hover:text-blue-300 cursor-pointer"
-                  />
-                  <MessageCircle
-                    size={20}
-                    className="hover:text-blue-600 cursor-pointer"
-                  />
+                  {/* LinkedIn */}
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Linkedin
+                      size={20}
+                      className="hover:text-blue-300 cursor-pointer"
+                    />
+                  </a>
+
+                  {/* CTFtime */}
+                  <a
+                    href={member.ctftime}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Flag
+                      size={20}
+                      className="hover:text-red-600 cursor-pointer"
+                    />
+                  </a>
                 </div>
               </div>
             ))}
@@ -300,7 +368,7 @@ const CTFTeamWebsite = () => {
       </section>
 
       {/* Timeline Section */}
-      <section id="timeline" className="min-h-screen py-20 px-6 relative">
+      <section id="succeeds" className="min-h-screen py-20 px-6 relative">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
             Achievements & Milestones
@@ -383,7 +451,8 @@ const CTFTeamWebsite = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <a
-              href="#"
+              href="https://www.linkedin.com/company/c1cc4d0"
+              target="_blank"
               className={`border ${borderColor} p-12 rounded-2xl ${hoverColor} transition-all transform hover:scale-105 ${cardBg} group`}
             >
               <Linkedin
@@ -394,6 +463,7 @@ const CTFTeamWebsite = () => {
             </a>
             <a
               href="#"
+              target="_blank"
               className={`border ${borderColor} p-12 rounded-b-full ${hoverColor} transition-all transform hover:scale-105 ${cardBg} group`}
             >
               <Instagram
@@ -403,7 +473,8 @@ const CTFTeamWebsite = () => {
               <h3 className="text-xl font-bold">Instagram</h3>
             </a>
             <a
-              href="#"
+              href="https://discord.gg/cTfEej88"
+              target="_blank"
               className={`border ${borderColor} p-12 rounded-t-full ${hoverColor} transition-all transform hover:scale-105 ${cardBg} group`}
             >
               <MessageCircle
@@ -413,7 +484,8 @@ const CTFTeamWebsite = () => {
               <h3 className="text-xl font-bold">Discord</h3>
             </a>
             <a
-              href="#"
+              href="https://discord.gg/cTfEej88"
+              target="_blank"
               className={`border ${borderColor} p-12 rounded-2xl ${hoverColor} transition-all transform hover:scale-105 ${cardBg} group`}
             >
               <Clock
@@ -507,14 +579,14 @@ const CTFTeamWebsite = () => {
                 <Mail className="mr-4 text-red-600" />
                 <div>
                   <span className="text-gray-400">Email:</span>
-                  <span className="ml-4">c1cc4d0.ctf@gmail.com</span>
+                  <span className="ml-4">c1cc4d0@gmail.com</span>
                 </div>
               </div>
               <div className="flex items-center">
                 <Phone className="mr-4 text-red-600" />
                 <div>
                   <span className="text-gray-400">Phone:</span>
-                  <span className="ml-4">0904724 68686</span>
+                  <span className="ml-4">+91 73588 51959</span>
                 </div>
               </div>
             </div>
