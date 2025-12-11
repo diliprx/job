@@ -140,7 +140,7 @@ const CTFTeamWebsite = () => {
       year: "2025",
       event: "Sairam Enginnering College, Chennai",
       title: "AIRO 5.0 2025",
-      place: "3rd Place (National Level)",
+      place: "1st Position (National Level)",
       description:
         "Secured 3rd Place out of hundreds of national teams, demonstrating precision, speed, and unmatched teamwork under pressure.",
       details: [
@@ -151,7 +151,7 @@ const CTFTeamWebsite = () => {
       year: "2025",
       event: "Sairam Enginnering College, Chennai",
       title: "CODECRAFT-25",
-      place: "3rd Place (National Level)",
+      place: "2nd Place (National Level)",
       description:
         "Secured 3rd Place out of hundreds of national teams, demonstrating precision, speed, and unmatched teamwork under pressure.",
       details: [
