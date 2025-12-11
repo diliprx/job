@@ -96,7 +96,7 @@ const CTFTeamWebsite = () => {
   },
   { 
     name: "Kirthi Sai T", 
-    handle: "flexi_jack",
+    handle: "fleix_jack",
     linkedin: "https://www.linkedin.com/in/kirthi-sai/",
     ctftime: "https://tryhackme.com/p/felixjack"
   },
