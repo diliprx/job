@@ -67,7 +67,7 @@ const CTFTeamWebsite = () => {
   const teamMembers = [
     {
       name: "Akash VI",
-      handle: "MIK3Y",
+      handle: "M!K3Y",
       linkedin: "https://www.linkedin.com/in/akash-v-i/",
       ctftime: "https://tryhackme.com/p/M1K3Y",
     },
@@ -102,7 +102,7 @@ const CTFTeamWebsite = () => {
       ctftime: "https://tryhackme.com/p/felixjack",
     },
     {
-      name: "Muthumeena",
+      name: "Muthumeena M",
       handle: "P34rlf15h",
       linkedin: "https://www.linkedin.com/in/muthumeena-m-5091b3290/",
       ctftime: "https://tryhackme.com/p/Muthumeena",
@@ -114,7 +114,7 @@ const CTFTeamWebsite = () => {
       ctftime: "https://tryhackme.com/p/Auronix",
     },
     {
-      name: "Porselvi",
+      name: "Porselvi P",
       handle: "Crypt0Cr3w",
       linkedin: "https://www.linkedin.com/in/porselvi-p-130a282a0/",
       ctftime: "https://tryhackme.com/p/Crypt0Cr3w",
@@ -233,9 +233,20 @@ const CTFTeamWebsite = () => {
       ? "bg-gradient-to-r from-white to-gray-200 text-black hover:from-red-400 hover:to-red-500"
       : "bg-gradient-to-r from-gray-900 to-black text-white hover:from-red-500 hover:to-red-600";
 
+  // Keep document background aligned with theme to avoid white bleed on overscroll
+  useEffect(() => {
+    const bg = theme === "dark" ? "#000000" : "#f9fafb";
+    document.documentElement.style.backgroundColor = bg;
+    document.body.style.backgroundColor = bg;
+    return () => {
+      document.documentElement.style.backgroundColor = "";
+      document.body.style.backgroundColor = "";
+    };
+  }, [theme]);
+
   return (
     <div
-      className={`min-h-screen ${themeClasses} font-mono relative overflow-hidden transition-colors duration-300`}
+      className={`min-h-screen w-full ${themeClasses} font-mono relative overflow-x-hidden transition-colors duration-300`}
       ref={containerRef}
     >
       {/* Binary Rain Background */}
@@ -377,15 +388,15 @@ const CTFTeamWebsite = () => {
             and analytical skills as a team.
           </p>
           <button
-  onClick={() => scrollToSection("profiles")}
-  className={`${
-    theme === "dark"
-      ? "bg-white text-black hover:bg-red-600 hover:text-black"
-      : "bg-black text-white hover:bg-red-600"
-  } px-8 py-3 font-bold transition-all transform hover:scale-105`}
->
-  JOIN OUR NEXT EVENT
-</button>
+            onClick={() => scrollToSection("profiles")}
+            className={`${
+              theme === "dark"
+                ? "bg-white text-black hover:bg-red-600 hover:text-black"
+                : "bg-black text-white hover:bg-red-600"
+            } px-8 py-3 font-bold transition-all transform hover:scale-105 rounded-full`}
+          >
+            JOIN OUR NEXT EVENT
+          </button>
  
         </div>
       </section>
@@ -692,6 +703,16 @@ const CTFTeamWebsite = () => {
       </footer>
 
       <style>{`
+        *, *::before, *::after {
+          box-sizing: border-box;
+        }
+        html, body, #root {
+          width: 100%;
+          overflow-x: hidden;
+        }
+        html, body {
+          overflow-x: hidden;
+        }
         @keyframes scroll {
           0% {
             transform: translateX(0);
