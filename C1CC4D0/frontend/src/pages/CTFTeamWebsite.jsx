@@ -160,6 +160,16 @@ const CTFTeamWebsite = () => {
     theme === "dark" ? "hover:border-red-400" : "hover:border-red-600";
   const cardBg =
     theme === "dark" ? "bg-black bg-opacity-50" : "bg-white bg-opacity-80";
+  const focusRing =
+    theme === "dark"
+      ? "focus-visible:ring-offset-black focus-visible:ring-offset-2"
+      : "focus-visible:ring-offset-white focus-visible:ring-offset-2";
+  const buttonBase =
+    "inline-flex items-center justify-center px-8 py-3 rounded-full font-bold transition-all duration-200 border border-transparent shadow-[0_10px_25px_rgba(239,68,68,0.25)] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500";
+  const primaryButton =
+    theme === "dark"
+      ? "bg-gradient-to-r from-white to-gray-200 text-black hover:from-red-400 hover:to-red-500"
+      : "bg-gradient-to-r from-gray-900 to-black text-white hover:from-red-500 hover:to-red-600";
 
   return (
     <div
@@ -303,11 +313,7 @@ const CTFTeamWebsite = () => {
            </p>
           <button
             onClick={() => scrollToSection("profiles")}
-            className={`${
-              theme === "dark"
-                ? "bg-white text-black hover:bg-red-600 hover:text-black"
-                : "bg-black text-white hover:bg-red-600"
-            } px-8 py-3 font-bold transition-all transform hover:scale-105`}
+            className={`${buttonBase} ${primaryButton} ${focusRing}`}
           >
             JOIN OUR NEXT EVENT
           </button>
@@ -563,11 +569,7 @@ const CTFTeamWebsite = () => {
             </p>
             <button
               onClick={() => scrollToSection("profiles")}
-              className={`${
-                theme === "dark"
-                  ? "bg-white text-black hover:bg-red-600 hover:text-black"
-                  : "bg-black text-white hover:bg-red-600"
-              } px-8 py-3 font-bold transition-all transform hover:scale-105`}
+              className={`${buttonBase} ${primaryButton} ${focusRing}`}
             >
               Apply Now
             </button>
