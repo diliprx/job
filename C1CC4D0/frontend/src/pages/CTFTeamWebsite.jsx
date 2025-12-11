@@ -18,6 +18,7 @@ const CTFTeamWebsite = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [theme, setTheme] = useState("dark");
+  const [showAllAchievements, setShowAllAchievements] = useState(false);
   const containerRef = useRef(null);
   const [drops, setDrops] = useState([]);
 
@@ -63,71 +64,6 @@ const CTFTeamWebsite = () => {
     document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
   };
 
-<<<<<<< HEAD
- const teamMembers = [
-  { 
-    name: "Akash VI", 
-    handle: "M!K3Y",
-    linkedin  : "https://www.linkedin.com/in/akash-v-i/", 
-    ctftime: "https://tryhackme.com/p/M1K3Y"
-  },
-  { 
-    name: "Dilip Kumar V", 
-    handle: "Cle_Obsecure",
-    linkedin: "https://www.linkedin.com/in/diliprx/",
-    ctftime: "https://tryhackme.com/p/CleObsecure"
-  },
-  { 
-    name: "Gopinath S", 
-    handle: "A$TR0",
-    linkedin: "https://www.linkedin.com/in/gopinath-s-42256b293/",
-    ctftime: "https://ctftime.org/user/astro"
-  },
-  { 
-    name: "Hari Priyan R", 
-    handle: "Hpr31",
-    linkedin: "https://www.linkedin.com/in/haripriyan-r-29b25a323/",
-    ctftime: "https://tryhackme.com/p/Hpr31"
-  },
-  { 
-    name: "Hemanth Kumar B", 
-    handle: "N1ght_M4r3_d4rk",
-    linkedin: "https://www.linkedin.com/in/hemanthkumarb485/",
-    ctftime: "https://tryhackme.com/p/N1ghtM4r3485"
-  },
-  { 
-    name: "Kirthi Sai T", 
-    handle: "felix_jack",
-    linkedin: "https://www.linkedin.com/in/kirthi-sai/",
-    ctftime: "https://tryhackme.com/p/felixjack"
-  },
-  { 
-    name: "Muthumeena", 
-    handle: "P34rlf15h",
-    linkedin: "https://www.linkedin.com/in/muthumeena-m-5091b3290/",
-    ctftime: "https://tryhackme.com/p/Muthumeena"
-  },
-  { 
-    name: "Lakshmi S", 
-    handle: "lakshmi",
-    linkedin: "https://www.linkedin.com/in/lakshmi-suresh383/",
-    ctftime: "https://ctftime.org/user/lakshmi"
-  },
-  { 
-    name: "Porselvi P", 
-    handle: "Crypt0Cr3w",
-    linkedin: "https://www.linkedin.com/in/porselvi-p-130a282a0/",
-    ctftime: "https://tryhackme.com/p/Crypt0Cr3w"
-  },
-  {
-    name: "Sachin Madhumitha Sree D",
-    handle: "Sen0i",
-    linkedin: "https://www.linkedin.com/in/sachin-madhumitha-sree-d-/",
-    ctftime: "https://tryhackme.com/p/Sen0i"
-  }
-];
-
-=======
   const teamMembers = [
     {
       name: "Akash VI",
@@ -188,9 +124,8 @@ const CTFTeamWebsite = () => {
       handle: "Sen0i",
       linkedin: "https://www.linkedin.com/in/sachin-madhumitha-sree-d-/",
       ctftime: "https://tryhackme.com/p/Sen0i",
-    },
+    }
   ];
->>>>>>> 54e7e459761f21b830bf6e112b15a5c767d76423
 
   const achievements = [
     {
@@ -274,6 +209,10 @@ const CTFTeamWebsite = () => {
       ],
     },
   ];
+
+  const visibleAchievements = showAllAchievements
+    ? achievements
+    : achievements.slice(0, 3);
 
   const themeClasses =
     theme === "dark" ? "bg-black text-white" : "bg-gray-50 text-gray-900";
@@ -438,19 +377,16 @@ const CTFTeamWebsite = () => {
             and analytical skills as a team.
           </p>
           <button
-            onClick={() => scrollToSection("profiles")}
-<<<<<<< HEAD
-            className={`${buttonBase} ${primaryButton} ${focusRing}`}
-=======
-            className={`${
-              theme === "dark"
-                ? "bg-white text-black hover:bg-red-600 hover:text-black"
-                : "bg-black text-white hover:bg-red-600"
-            } px-8 py-3 font-bold transition-all transform hover:scale-105`}
->>>>>>> 54e7e459761f21b830bf6e112b15a5c767d76423
-          >
-            JOIN OUR NEXT EVENT
-          </button>
+  onClick={() => scrollToSection("profiles")}
+  className={`${
+    theme === "dark"
+      ? "bg-white text-black hover:bg-red-600 hover:text-black"
+      : "bg-black text-white hover:bg-red-600"
+  } px-8 py-3 font-bold transition-all transform hover:scale-105`}
+>
+  JOIN OUR NEXT EVENT
+</button>
+ 
         </div>
       </section>
 
@@ -526,7 +462,7 @@ const CTFTeamWebsite = () => {
           </p>
 
           <div className="space-y-12">
-            {achievements.map((achievement, index) => (
+            {visibleAchievements.map((achievement, index) => (
               <div key={index} className="flex">
                 <div className="flex flex-col items-center mr-8">
                   <Trophy className="text-gold-400 mb-4" size={32} />
@@ -579,6 +515,17 @@ const CTFTeamWebsite = () => {
               </div>
             ))}
           </div>
+
+          {achievements.length > 3 && (
+            <div className="text-center mt-10">
+              <button
+                onClick={() => setShowAllAchievements((prev) => !prev)}
+                className={`${buttonBase} ${primaryButton} ${focusRing}`}
+              >
+                {showAllAchievements ? "Show Less" : "Show More"}
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
