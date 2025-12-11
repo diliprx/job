@@ -107,8 +107,8 @@ const CTFTeamWebsite = () => {
     ctftime: "https://tryhackme.com/p/Muthumeena"
   },
   { 
-    name: "Lakshmi Suresh", 
-    handle: "lakshmi",
+    name: "Lakshmi S", 
+    handle: "Ash3nX",
     linkedin: "https://www.linkedin.com/in/lakshmi-suresh383/",
     ctftime: "https://tryhackme.com/p/Auronix"
   },
