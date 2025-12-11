@@ -464,7 +464,7 @@ const CTFTeamWebsite = () => {
               <h3 className="text-xl font-bold">LinkedIn</h3>
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/c1cc4d0"
               target="_blank"
               className={`border ${borderColor} p-12 rounded-b-full ${hoverColor} transition-all transform hover:scale-105 ${cardBg} group`}
             >
