@@ -107,13 +107,13 @@ const CTFTeamWebsite = () => {
     ctftime: "https://tryhackme.com/p/Muthumeena"
   },
   { 
-    name: "Lakshmi Suresh", 
+    name: "Lakshmi S", 
     handle: "lakshmi",
     linkedin: "https://www.linkedin.com/in/lakshmi-suresh383/",
     ctftime: "https://ctftime.org/user/lakshmi"
   },
   { 
-    name: "Porselvi", 
+    name: "Porselvi P", 
     handle: "Crypt0Cr3w",
     linkedin: "https://www.linkedin.com/in/porselvi-p-130a282a0/",
     ctftime: "https://tryhackme.com/p/Crypt0Cr3w"
@@ -292,7 +292,7 @@ const CTFTeamWebsite = () => {
           </h1>
 
           <p className="text-xl md:text-2xl mb-8 text-red-400">
-            / Recon | Break | Capture
+            | Recon | Break | Capture |
           </p>
           <p
             className={`max-w-3xl mx-auto ${
@@ -302,7 +302,7 @@ const CTFTeamWebsite = () => {
            From national arenas to global CTF battlegrounds, we push ourselves to break limits and think differently. Each challenge teaches us something new, helping us grow, innovate, and sharpen our technical and analytical skills as a team.
            </p>
           <button
-            onClick={() => scrollToSection("contact")}
+            onClick={() => scrollToSection("profiles")}
             className={`${
               theme === "dark"
                 ? "bg-white text-black hover:bg-red-600 hover:text-black"
@@ -562,7 +562,7 @@ const CTFTeamWebsite = () => {
              Ready to roll with C1CC4D0? Hit the application form and shoot your shot — your place on the squad might be waiting.
             </p>
             <button
-              onClick={() => scrollToSection("contact")}
+              onClick={() => scrollToSection("profiles")}
               className={`${
                 theme === "dark"
                   ? "bg-white text-black hover:bg-red-600 hover:text-black"
