@@ -68,7 +68,7 @@ const CTFTeamWebsite = () => {
     name: "Akash VI", 
     handle: "MIK3Y",
     linkedin: "https://www.linkedin.com/in/akash-v-i/", 
-    ctftime: "https://ctftime.org/user/akash"
+    ctftime: "https://tryhackme.com/p/M1K3Y"
   },
   { 
     name: "Dilip Kumar V", 
