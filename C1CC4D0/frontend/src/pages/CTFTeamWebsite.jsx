@@ -171,7 +171,7 @@ const CTFTeamWebsite = () => {
         {drops.map((drop) => (
           <div
             key={drop.id}
-            className="absolute font-mono text-red-500"
+            className="absolute font-mono text-red-700"
             style={{
               left: `${drop.x}px`,
               top: `${drop.y}px`,
