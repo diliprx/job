@@ -129,9 +129,9 @@ const CTFTeamWebsite = () => {
 
   const achievements = [
     {
-      year: "2025",
-      event: "Saveetha Engineering College, Chennai",
-      title: "Phantom CTF",
+      year: "2024",
+      event: "SRM Engineering College, Chengalpattu",
+      title: "H7TEX CTF",
       place: "3rd Place",
       description:
         "Secured 3rd place in an exciting and challenging cybersecurity competition, tackling problems in web exploitation, cryptography, forensics, and reverse engineering.",
