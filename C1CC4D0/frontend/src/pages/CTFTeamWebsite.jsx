@@ -74,7 +74,7 @@ const CTFTeamWebsite = () => {
     name: "Dilip Kumar V", 
     handle: "Cle_Obsecure",
     linkedin: "https://www.linkedin.com/in/diliprx/",
-    ctftime: "https://ctftime.org/user/cle_obsecure"
+    ctftime: "https://tryhackme.com/p/CleObsecure"
   },
   { 
     name: "Gopinath S", 
@@ -84,40 +84,46 @@ const CTFTeamWebsite = () => {
   },
   { 
     name: "Hari Priyan R", 
-    handle: "NUX",
+    handle: "Hpr31",
     linkedin: "https://www.linkedin.com/in/haripriyan-r-29b25a323/",
-    ctftime: "https://ctftime.org/user/nux"
+    ctftime: "https://tryhackme.com/p/Hpr31"
   },
   { 
     name: "Hemanth Kumar B", 
-    handle: "NIGHT_MARE",
+    handle: "N1ght_M4r3_d4rk",
     linkedin: "https://www.linkedin.com/in/hemanthkumarb485/",
-    ctftime: "https://ctftime.org/user/night_mare"
+    ctftime: "https://tryhackme.com/p/N1ghtM4r3485"
   },
   { 
     name: "Kirthi Sai T", 
     handle: "flexi_jack",
     linkedin: "https://www.linkedin.com/in/kirthi-sai/",
-    ctftime: "https://ctftime.org/user/flexi_jack"
+    ctftime: "https://tryhackme.com/p/felixjack"
   },
   { 
-    name: "Muthu Meena", 
-    handle: "doremon",
-    linkedin: "https://www.linkedin.com/in/muthu",
-    ctftime: "https://ctftime.org/user/doremon"
+    name: "Muthumeena", 
+    handle: "P34rlf15h",
+    linkedin: "https://www.linkedin.com/in/muthumeena-m-5091b3290/",
+    ctftime: "https://tryhackme.com/p/Muthumeena"
   },
   { 
-    name: "Lakshmi", 
+    name: "Lakshmi Suresh", 
     handle: "lakshmi",
-    linkedin: "https://www.linkedin.com/in/lakshmi",
+    linkedin: "https://www.linkedin.com/in/lakshmi-suresh383/",
     ctftime: "https://ctftime.org/user/lakshmi"
   },
   { 
     name: "Porselvi", 
-    handle: "Crypto_Cr3w",
-    linkedin: "https://www.linkedin.com/in/porselvi",
-    ctftime: "https://ctftime.org/user/crypto_cr3w"
+    handle: "Crypt0Cr3w",
+    linkedin: "https://www.linkedin.com/in/porselvi-p-130a282a0/",
+    ctftime: "https://tryhackme.com/p/Crypt0Cr3w"
   },
+  {
+    name: "Sachin Madhumithasree",
+    handle: "Sen0i",
+    linkedin: "https://www.linkedin.com/in/sachin-madhumitha-sree-d-/",
+    ctftime: "https://tryhackme.com/p/Sen0i"
+  }
 ];
 
 
@@ -293,12 +299,8 @@ const CTFTeamWebsite = () => {
               theme === "dark" ? "text-gray-300" : "text-gray-600"
             } mb-8 leading-relaxed`}
           >
-            We actively participate in national and international CTF
-            competitions, pushing our limits with every challenge we face.
-            Beyond just solving flags, we aim to learn, collaborate, and
-            innovate – transforming every competition into an opportunity to
-            enhance our technical expertise and problem-solving mindset.
-          </p>
+           From national arenas to global CTF battlegrounds, we push ourselves to break limits and think differently. Each challenge teaches us something new, helping us grow, innovate, and sharpen our technical and analytical skills as a team.
+           </p>
           <button
             onClick={() => scrollToSection("contact")}
             className={`${
@@ -484,7 +486,7 @@ const CTFTeamWebsite = () => {
               <h3 className="text-xl font-bold">Discord</h3>
             </a>
             <a
-              href="https://discord.gg/cTfEej88"
+              href="https://ctftime.org/team/373308 "
               target="_blank"
               className={`border ${borderColor} p-12 rounded-2xl ${hoverColor} transition-all transform hover:scale-105 ${cardBg} group`}
             >
@@ -557,8 +559,7 @@ const CTFTeamWebsite = () => {
           <div className="mb-16">
             <h3 className="text-2xl font-bold mb-8">Join Our Team</h3>
             <p className="text-gray-400 mb-8">
-              Interested in joining C1CC4D0? Fill out our application form to be
-              considered for a spot on the team.
+             Ready to roll with C1CC4D0? Hit the application form and shoot your shot — your place on the squad might be waiting.
             </p>
             <button
               onClick={() => scrollToSection("contact")}
