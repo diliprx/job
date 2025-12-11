@@ -302,7 +302,7 @@ const CTFTeamWebsite = () => {
            From national arenas to global CTF battlegrounds, we push ourselves to break limits and think differently. Each challenge teaches us something new, helping us grow, innovate, and sharpen our technical and analytical skills as a team.
            </p>
           <button
-            onClick={() => scrollToSection("contact")}
+            onClick={() => scrollToSection("profiles")}
             className={`${
               theme === "dark"
                 ? "bg-white text-black hover:bg-red-600 hover:text-black"
