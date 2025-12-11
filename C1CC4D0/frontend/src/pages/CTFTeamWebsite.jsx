@@ -63,91 +63,152 @@ const CTFTeamWebsite = () => {
     document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
   };
 
- const teamMembers = [
-  { 
-    name: "Akash VI", 
-    handle: "MIK3Y",
-    linkedin: "https://www.linkedin.com/in/akash-v-i/", 
-    ctftime: "https://tryhackme.com/p/M1K3Y"
-  },
-  { 
-    name: "Dilip Kumar V", 
-    handle: "Cle_Obsecure",
-    linkedin: "https://www.linkedin.com/in/diliprx/",
-    ctftime: "https://tryhackme.com/p/CleObsecure"
-  },
-  { 
-    name: "Gopinath S", 
-    handle: "A$TR0",
-    linkedin: "https://www.linkedin.com/in/gopinath-s-42256b293/",
-    ctftime: "https://ctftime.org/user/astro"
-  },
-  { 
-    name: "Hari Priyan R", 
-    handle: "Hpr31",
-    linkedin: "https://www.linkedin.com/in/haripriyan-r-29b25a323/",
-    ctftime: "https://tryhackme.com/p/Hpr31"
-  },
-  { 
-    name: "Hemanth Kumar B", 
-    handle: "N1ght_M4r3_d4rk",
-    linkedin: "https://www.linkedin.com/in/hemanthkumarb485/",
-    ctftime: "https://tryhackme.com/p/N1ghtM4r3485"
-  },
-  { 
-    name: "Kirthi Sai T", 
-    handle: "felix_jack",
-    linkedin: "https://www.linkedin.com/in/kirthi-sai/",
-    ctftime: "https://tryhackme.com/p/felixjack"
-  },
-  { 
-    name: "Muthumeena", 
-    handle: "P34rlf15h",
-    linkedin: "https://www.linkedin.com/in/muthumeena-m-5091b3290/",
-    ctftime: "https://tryhackme.com/p/Muthumeena"
-  },
-  { 
-    name: "Lakshmi S", 
-    handle: "Ash3nX",
-    linkedin: "https://www.linkedin.com/in/lakshmi-suresh383/",
-    ctftime: "https://tryhackme.com/p/Auronix"
-  },
-  { 
-    name: "Porselvi", 
-    handle: "Crypt0Cr3w",
-    linkedin: "https://www.linkedin.com/in/porselvi-p-130a282a0/",
-    ctftime: "https://tryhackme.com/p/Crypt0Cr3w"
-  },
-  {
-    name: "Sachin Madhumitha Sree D",
-    handle: "Sen0i",
-    linkedin: "https://www.linkedin.com/in/sachin-madhumitha-sree-d-/",
-    ctftime: "https://tryhackme.com/p/Sen0i"
-  }
-];
-
+  const teamMembers = [
+    {
+      name: "Akash VI",
+      handle: "MIK3Y",
+      linkedin: "https://www.linkedin.com/in/akash-v-i/",
+      ctftime: "https://tryhackme.com/p/M1K3Y",
+    },
+    {
+      name: "Dilip Kumar V",
+      handle: "Cle_Obsecure",
+      linkedin: "https://www.linkedin.com/in/diliprx/",
+      ctftime: "https://tryhackme.com/p/CleObsecure",
+    },
+    {
+      name: "Gopinath S",
+      handle: "A$TR0",
+      linkedin: "https://www.linkedin.com/in/gopinath-s-42256b293/",
+      ctftime: "https://ctftime.org/user/astro",
+    },
+    {
+      name: "Hari Priyan R",
+      handle: "Hpr31",
+      linkedin: "https://www.linkedin.com/in/haripriyan-r-29b25a323/",
+      ctftime: "https://tryhackme.com/p/Hpr31",
+    },
+    {
+      name: "Hemanth Kumar B",
+      handle: "N1ght_M4r3_d4rk",
+      linkedin: "https://www.linkedin.com/in/hemanthkumarb485/",
+      ctftime: "https://tryhackme.com/p/N1ghtM4r3485",
+    },
+    {
+      name: "Kirthi Sai T",
+      handle: "felix_jack",
+      linkedin: "https://www.linkedin.com/in/kirthi-sai/",
+      ctftime: "https://tryhackme.com/p/felixjack",
+    },
+    {
+      name: "Muthumeena",
+      handle: "P34rlf15h",
+      linkedin: "https://www.linkedin.com/in/muthumeena-m-5091b3290/",
+      ctftime: "https://tryhackme.com/p/Muthumeena",
+    },
+    {
+      name: "Lakshmi S",
+      handle: "Ash3nX",
+      linkedin: "https://www.linkedin.com/in/lakshmi-suresh383/",
+      ctftime: "https://tryhackme.com/p/Auronix",
+    },
+    {
+      name: "Porselvi",
+      handle: "Crypt0Cr3w",
+      linkedin: "https://www.linkedin.com/in/porselvi-p-130a282a0/",
+      ctftime: "https://tryhackme.com/p/Crypt0Cr3w",
+    },
+    {
+      name: "Sachin Madhumitha Sree D",
+      handle: "Sen0i",
+      linkedin: "https://www.linkedin.com/in/sachin-madhumitha-sree-d-/",
+      ctftime: "https://tryhackme.com/p/Sen0i",
+    },
+  ];
 
   const achievements = [
     {
       year: "2024",
       event: "SRM Engineering College, Chengalpattu",
       title: "H7TEX CTF",
-      place: "3rd Place",
+      place: "3rd Place (Intern National Level)",
       description:
         "Secured 3rd place in an exciting and challenging cybersecurity competition, tackling problems in web exploitation, cryptography, forensics, and reverse engineering.",
       details: ["Won a cash prize for the achievement"],
     },
     {
       year: "2025",
-      event: "Team Cybercom, Chennai",
-      title: "Cybercom CTF 2025",
+      event: "Sairam Enginnering College, Chennai",
+      title: "AIRO 5.0 2025",
       place: "3rd Place (National Level)",
       description:
         "Secured 3rd Place out of hundreds of national teams, demonstrating precision, speed, and unmatched teamwork under pressure.",
       details: [
-        "Solved 13 out of 14 challenges (92.13% success rate)",
-        "Dominated Forensics & OSINT domains",
-        "Scored a total of 4567 points",
+        "Overcame complex challenges in web exploitation, cryptography, forensics, and reverse engineering",
+      ],
+    },
+    {
+      year: "2025",
+      event: "Sairam Enginnering College, Chennai",
+      title: "CODECRAFT-25",
+      place: "3rd Place (National Level)",
+      description:
+        "Secured 3rd Place out of hundreds of national teams, demonstrating precision, speed, and unmatched teamwork under pressure.",
+      details: [
+        "Won a cash prize for the achievement(6000 INR)",
+        "National level Hackathon with over 100 teams",
+      ],
+    },
+    {
+      year: "2025",
+      event: "Jerusalem College of Engineering - India",
+      title: "Escape Room 2.0 CTF",
+      place: "1st Postion",
+      description:
+        "C1CC4D0 secured 1st place in the Escape Room 2.0 CTF, excelling in both the Key and Flag challenge stages. The event tested our problem-solving, teamwork, and cybersecurity skills under high-pressure conditions.",
+      details: [
+        "Successfully completed the Key Challenge by uncovering clues, extracting hidden keys, and navigating multi-room puzzle structures.",
+        "Captured all final flags using the extracted keys, demonstrating strong coordination, logic, and technical proficiency.",
+      ],
+    },
+    {
+      year: "2025",
+      event:
+        "Sri Sai Ram Institute of Technology (Sairam Group of Institutions)",
+      title: "COCONEZ 2K25 – Capture The Flag",
+      place: "1st Place",
+      description:
+        "C1CC4D0 secured 1st place at COCONEZ 2K25, dominating challenges across Web, OSINT, Reverse Engineering, Forensics, Misc, and Cryptography. The event tested real-time problem-solving, team coordination, and technical depth under competitive pressure.",
+      details: [
+        "Solved multi-domain cybersecurity challenges that required rapid analysis, precision, and teamwork to capture flags before competing teams.",
+        "Demonstrated strong technical versatility by navigating diverse categories, treating each challenge like a digital puzzle demanding logic and creativity.",
+      ],
+    },
+    {
+      year: "2025",
+      event:
+        "New Prince Shri Bhavani College of Engineering and Technology, Chennai",
+      title: "INNOHACK – Ayathon Hackathon",
+      place: "3rd Place",
+      description:
+        "Secured 3rd place at INNOHACK – Ayathon Hackathon held on March 19–20, 2025. The team demonstrated strong innovation, strategic thinking, and problem-solving skills while developing impactful solutions under time-bound conditions.",
+      details: [
+        "Presented a creative and technically sound solution that impressed evaluators, reflecting the team’s dedication, planning, and execution throughout the event.",
+        "Appreciated the organizers for providing a platform that encouraged innovation, teamwork, and the development of meaningful technological ideas.",
+      ],
+    },
+    {
+      year: "2025",
+      event: "Easwari Engineering College (SRM Group of Institutions)",
+      title: "AnzenCTF 3.0",
+      place: "2nd Place",
+      description:
+        "C1CC4D0 secured 2nd place at AnzenCTF 3.0 on October 14th, demonstrating strong technical skill and consistent performance across multiple CTF domains. The event featured an intense set of challenges that tested precision, problem-solving, and collaborative strategy.",
+      details: [
+        "Competed across OSINT, Cryptography, Web Exploitation, Reverse Engineering, Forensics, and Steganography — showcasing versatility and cross-domain expertise under competitive pressure.",
+        "Achieved an overall score of 3475 points, reflecting strong execution, effective coordination, and the ability to solve complex problems within limited time.",
+        "Appreciated the organizers and Easwari Engineering College (SRM Group) for conducting a well-structured, engaging, and highly challenging cybersecurity competition.",
+        "Thankful for the guidance and continuous motivation from HoD Mr. Udhaya Sankar S M, whose support played a key role in the team’s consistent performance.",
       ],
     },
   ];
@@ -299,8 +360,11 @@ const CTFTeamWebsite = () => {
               theme === "dark" ? "text-gray-300" : "text-gray-600"
             } mb-8 leading-relaxed`}
           >
-           From national arenas to global CTF battlegrounds, we push ourselves to break limits and think differently. Each challenge teaches us something new, helping us grow, innovate, and sharpen our technical and analytical skills as a team.
-           </p>
+            From national arenas to global CTF battlegrounds, we push ourselves
+            to break limits and think differently. Each challenge teaches us
+            something new, helping us grow, innovate, and sharpen our technical
+            and analytical skills as a team.
+          </p>
           <button
             onClick={() => scrollToSection("profiles")}
             className={`${
@@ -559,7 +623,8 @@ const CTFTeamWebsite = () => {
           <div className="mb-16">
             <h3 className="text-2xl font-bold mb-8">Join Our Team</h3>
             <p className="text-gray-400 mb-8">
-             Ready to roll with C1CC4D0? Hit the application form and shoot your shot — your place on the squad might be waiting.
+              Ready to roll with C1CC4D0? Hit the application form and shoot
+              your shot — your place on the squad might be waiting.
             </p>
             <button
               onClick={() => scrollToSection("contact")}
@@ -569,7 +634,14 @@ const CTFTeamWebsite = () => {
                   : "bg-black text-white hover:bg-red-600"
               } px-8 py-3 font-bold transition-all transform hover:scale-105`}
             >
-              <a href="https://forms.gle/KLRzutn8MWFdAZ9v8" target="_blank" rel="noopener noreferrer"> Apply Now</a>
+              <a
+                href="https://forms.gle/KLRzutn8MWFdAZ9v8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                Apply Now
+              </a>
             </button>
           </div>
 
