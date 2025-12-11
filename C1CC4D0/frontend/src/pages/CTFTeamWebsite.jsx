@@ -569,7 +569,7 @@ const CTFTeamWebsite = () => {
                   : "bg-black text-white hover:bg-red-600"
               } px-8 py-3 font-bold transition-all transform hover:scale-105`}
             >
-              Apply Now
+              <a href="https://forms.gle/KLRzutn8MWFdAZ9v8" target="_blank" rel="noopener noreferrer"> Apply Now</a>
             </button>
           </div>
 
