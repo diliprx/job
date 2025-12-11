@@ -66,8 +66,8 @@ const CTFTeamWebsite = () => {
  const teamMembers = [
   { 
     name: "Akash VI", 
-    handle: "MIK3Y",
-    linkedin: "https://www.linkedin.com/in/akash-v-i/", 
+    handle: "M!K3Y",
+    linkedin  : "https://www.linkedin.com/in/akash-v-i/", 
     ctftime: "https://tryhackme.com/p/M1K3Y"
   },
   { 
