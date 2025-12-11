@@ -110,7 +110,7 @@ const CTFTeamWebsite = () => {
     name: "Lakshmi Suresh", 
     handle: "lakshmi",
     linkedin: "https://www.linkedin.com/in/lakshmi-suresh383/",
-    ctftime: "https://ctftime.org/user/lakshmi"
+    ctftime: "https://tryhackme.com/p/Auronix"
   },
   { 
     name: "Porselvi", 
