@@ -142,7 +142,7 @@ const CTFTeamWebsite = () => {
       title: "AIRO 5.0 2025",
       place: "1st Position (National Level)",
       description:
-        "Secured 3rd Place out of hundreds of national teams, demonstrating precision, speed, and unmatched teamwork under pressure.",
+        "Secured 1st Place out of hundreds of national teams, demonstrating precision, speed, and unmatched teamwork under pressure.",
       details: [
         "Overcame complex challenges in web exploitation, cryptography, forensics, and reverse engineering",
       ],
@@ -153,7 +153,7 @@ const CTFTeamWebsite = () => {
       title: "CODECRAFT-25",
       place: "2nd Place (National Level)",
       description:
-        "Secured 3rd Place out of hundreds of national teams, demonstrating precision, speed, and unmatched teamwork under pressure.",
+        "Secured 2nd Place out of hundreds of national teams, demonstrating precision, speed, and unmatched teamwork under pressure.",
       details: [
         "Won a cash prize for the achievement(6000 INR)",
         "National level Hackathon with over 100 teams",
@@ -181,7 +181,6 @@ const CTFTeamWebsite = () => {
         "C1CC4D0 secured 1st place at COCONEZ 2K25, dominating challenges across Web, OSINT, Reverse Engineering, Forensics, Misc, and Cryptography. The event tested real-time problem-solving, team coordination, and technical depth under competitive pressure.",
       details: [
         "Solved multi-domain cybersecurity challenges that required rapid analysis, precision, and teamwork to capture flags before competing teams.",
-        "Demonstrated strong technical versatility by navigating diverse categories, treating each challenge like a digital puzzle demanding logic and creativity.",
       ],
     },
     {
@@ -194,7 +193,6 @@ const CTFTeamWebsite = () => {
         "Secured 3rd place at INNOHACK – Ayathon Hackathon held on March 19–20, 2025. The team demonstrated strong innovation, strategic thinking, and problem-solving skills while developing impactful solutions under time-bound conditions.",
       details: [
         "Presented a creative and technically sound solution that impressed evaluators, reflecting the team’s dedication, planning, and execution throughout the event.",
-        "Appreciated the organizers for providing a platform that encouraged innovation, teamwork, and the development of meaningful technological ideas.",
       ],
     },
     {
@@ -207,8 +205,6 @@ const CTFTeamWebsite = () => {
       details: [
         "Competed across OSINT, Cryptography, Web Exploitation, Reverse Engineering, Forensics, and Steganography — showcasing versatility and cross-domain expertise under competitive pressure.",
         "Achieved an overall score of 3475 points, reflecting strong execution, effective coordination, and the ability to solve complex problems within limited time.",
-        "Appreciated the organizers and Easwari Engineering College (SRM Group) for conducting a well-structured, engaging, and highly challenging cybersecurity competition.",
-        "Thankful for the guidance and continuous motivation from HoD Mr. Udhaya Sankar S M, whose support played a key role in the team’s consistent performance.",
       ],
     },
   ];
