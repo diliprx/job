@@ -119,7 +119,7 @@ const CTFTeamWebsite = () => {
     ctftime: "https://tryhackme.com/p/Crypt0Cr3w"
   },
   {
-    name: "Sachin Madhumithasree",
+    name: "Sachin Madhumitha Sree D",
     handle: "Sen0i",
     linkedin: "https://www.linkedin.com/in/sachin-madhumitha-sree-d-/",
     ctftime: "https://tryhackme.com/p/Sen0i"
