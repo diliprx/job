@@ -359,7 +359,7 @@ const CTFTeamWebsite = () => {
                   >
                     <Flag
                       size={20}
-                      className="hover:text-red-600 cursor-pointer"
+                      className="hover:text-green-600 cursor-pointer"
                     />
                   </a>
                 </div>
